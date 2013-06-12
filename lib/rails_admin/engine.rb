@@ -20,9 +20,9 @@ module RailsAdmin
       app.config.assets.precompile += ['rails_admin/rails_admin.js', 'rails_admin/rails_admin.css', 'rails_admin/jquery.colorpicker.js', 'rails_admin/jquery.colorpicker.css']
     end
 
-    initializer "RailsAdmin pjax hook" do |app|
-      app.config.middleware.use Rack::Pjax
-    end
+    #initializer "RailsAdmin pjax hook" do |app|
+    #  app.config.middleware.use Rack::Pjax
+    #end
 
     rake_tasks do
       Dir[File.join(File.dirname(__FILE__),'../tasks/*.rake')].each { |f| load f }
