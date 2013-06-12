@@ -13,7 +13,7 @@
   current_action = params[:action].in?(['create', 'new']) ? 'create' : 'update'
 
   #xhr = !field.associated_collection_cache_all
-  xhr = true
+  xhr = false
 
   collection = if xhr
     selected.map { |o| [o.send(field.associated_object_label_method), o.send(field.associated_primary_key)] }
